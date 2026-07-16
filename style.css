@@ -1,0 +1,342 @@
+/* -----------------------------
+   GOOGLE FONTS
+----------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@600;700;800&display=swap');
+
+/* -----------------------------
+   GLOBAL
+----------------------------- */
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:"Times New Roman", serif;
+background:#FFF8F4;
+color:#333;
+overflow-x:hidden;
+}
+
+/* -----------------------------
+   LOGO
+----------------------------- */
+
+.logo-text{
+font-family:'Bodoni Moda', serif;
+font-weight:700;
+color:#B11226;
+letter-spacing:1px;
+}
+
+/* -----------------------------
+   TITLES
+----------------------------- */
+
+.hero-title{
+font-family:'Bodoni Moda', serif;
+font-weight:800;
+line-height:1.1;
+color:#B11226;
+}
+
+.section-title{
+font-family:'Bodoni Moda', serif;
+font-size:3rem;
+font-weight:700;
+color:#B11226;
+}
+
+.hero-subtitle{
+font-size:1.5rem;
+font-weight:600;
+color:#555;
+}
+
+.body-text{
+font-size:1.1rem;
+line-height:2;
+}
+
+/* -----------------------------
+   BUTTONS
+----------------------------- */
+
+.primary-btn{
+background:#B11226;
+color:white;
+padding:16px 34px;
+border-radius:999px;
+font-weight:bold;
+transition:.35s;
+display:inline-block;
+box-shadow:0 10px 25px rgba(177,18,38,.25);
+}
+
+.primary-btn:hover{
+transform:translateY(-4px);
+background:#931020;
+}
+
+.secondary-btn{
+padding:16px 34px;
+border-radius:999px;
+border:2px solid #B11226;
+color:#B11226;
+transition:.35s;
+display:inline-block;
+}
+
+.secondary-btn:hover{
+background:#B11226;
+color:white;
+transform:translateY(-4px);
+}
+
+/* -----------------------------
+   GLASS CARD
+----------------------------- */
+
+.glass-card{
+background:rgba(255,255,255,.75);
+backdrop-filter:blur(12px);
+border-radius:28px;
+padding:45px;
+box-shadow:0 20px 50px rgba(0,0,0,.08);
+transition:.35s;
+}
+
+.glass-card:hover{
+transform:translateY(-6px);
+}
+
+/* -----------------------------
+   INPUTS
+----------------------------- */
+
+.input-box{
+width:100%;
+padding:18px;
+border-radius:16px;
+border:1px solid #ddd;
+font-size:16px;
+outline:none;
+transition:.3s;
+}
+
+.input-box:focus{
+border-color:#B11226;
+box-shadow:0 0 15px rgba(177,18,38,.2);
+}
+
+/* -----------------------------
+   CONTACT BUTTON
+----------------------------- */
+
+.contact-btn{
+background:white;
+color:#B11226;
+padding:18px 35px;
+border-radius:999px;
+font-weight:bold;
+transition:.3s;
+}
+
+.contact-btn:hover{
+transform:scale(1.05);
+}
+
+/* -----------------------------
+   FLOATING IMAGE
+----------------------------- */
+
+.floating-image img{
+animation:float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* -----------------------------
+   FLIP CARDS
+----------------------------- */
+
+.flip-card{
+background:transparent;
+height:260px;
+perspective:1000px;
+}
+
+.flip-inner{
+position:relative;
+width:100%;
+height:100%;
+transition:transform .8s;
+transform-style:preserve-3d;
+}
+
+.flip-card:hover .flip-inner{
+transform:rotateY(180deg);
+}
+
+.flip-front,
+.flip-back{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+border-radius:25px;
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+padding:25px;
+
+text-align:center;
+
+backface-visibility:hidden;
+
+box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+}
+
+.flip-front{
+
+background:white;
+
+font-size:22px;
+
+font-weight:700;
+
+}
+
+.flip-back{
+
+background:#B11226;
+
+color:white;
+
+transform:rotateY(180deg);
+
+font-size:18px;
+
+line-height:1.7;
+
+}
+
+/* -----------------------------
+   NAVIGATION
+----------------------------- */
+
+nav a{
+
+font-weight:600;
+
+transition:.3s;
+
+position:relative;
+
+}
+
+nav a:hover{
+
+color:#B11226;
+
+}
+
+nav a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-6px;
+
+width:0;
+
+height:2px;
+
+background:#B11226;
+
+transition:.3s;
+
+}
+
+nav a:hover::after{
+
+width:100%;
+
+}
+
+/* -----------------------------
+   FADE ANIMATION
+----------------------------- */
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:1s;
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* -----------------------------
+   MOBILE
+----------------------------- */
+
+@media(max-width:768px){
+
+.hero-title{
+
+font-size:3rem;
+
+}
+
+.section-title{
+
+font-size:2.2rem;
+
+}
+
+.glass-card{
+
+padding:25px;
+
+}
+
+.flip-card{
+
+height:220px;
+
+}
+
+}
